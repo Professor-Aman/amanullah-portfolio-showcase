@@ -71,12 +71,12 @@ const Contact = () => {
                 </div>
               </div>
               <a 
-                href="https://www.linkedin.com/in/aman-ullah" 
+                href="https://www.linkedin.com/in/aman-ullah-53279b1b4/" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-sm text-accent hover:underline"
               >
-                linkedin.com/in/aman-ullah
+                https://www.linkedin.com/in/aman-ullah-53279b1b4/
               </a>
             </Card>
 

@@ -1,80 +1,201 @@
-import { ArrowRight, Download } from "lucide-react";
+import { ArrowRight, Download, Code, Smartphone } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import amanPortrait from "@/assets/aman-portrait.jpg";
 import heroBg from "@/assets/hero-bg.jpg";
+import { useEffect, useState } from "react";
 
 const Hero = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const [titleAnimated, setTitleAnimated] = useState(false);
+  
+  useEffect(() => {
+    // Add fade-in animation effect when component mounts
+    const timer = setTimeout(() => {
+      setIsVisible(true);
+    }, 100);
+    
+    // Add title animation with delay
+    const titleTimer = setTimeout(() => {
+      setTitleAnimated(true);
+    }, 500);
+    
+    return () => {
+      clearTimeout(timer);
+      clearTimeout(titleTimer);
+    };
+  }, []);
+  
   const scrollToPortfolio = () => {
     const element = document.getElementById("portfolio");
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
   };
+  
+  const downloadCV = () => {
+    // Convert Google Drive view URL to direct download URL
+    const fileId = "1GsIFhHDjcN_qR2VR0dI2VxtC1Cv9xx9S";
+    const downloadUrl = `https://drive.google.com/uc?export=download&id=${fileId}`;
+    
+    // Create a temporary anchor element to trigger download
+    const link = document.createElement('a');
+    link.href = downloadUrl;
+    link.setAttribute('download', 'Aman_Ullah_CV.pdf');
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden w-full"
     >
-      {/* Background Image with Overlay */}
+      {/* Background Image */}
       <div className="absolute inset-0 z-0">
-        <img
-          src={heroBg}
-          alt="Tech Background"
+        <img 
+          src={heroBg} 
+          alt="Background" 
           className="w-full h-full object-cover"
+          style={{ filter: 'brightness(0.7)' }} 
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/95 via-primary/90 to-accent/80" />
+        <div className="absolute inset-0 bg-black opacity-40"></div>
+      </div>
+      
+      {/* Subtle particle/code background effect */}
+      <div className="absolute inset-0 z-1 opacity-10">
+        <div className="absolute top-1/4 left-1/4 text-white">
+          <Code size={64} />
+        </div>
+        <div className="absolute top-2/3 right-1/4 text-white">
+          <Smartphone size={64} />
+        </div>
+        <div className="absolute bottom-1/4 left-1/3 text-white">
+          <Code size={48} />
+        </div>
       </div>
 
-      {/* Content */}
-      <div className="container mx-auto px-4 z-10 text-center">
-        <div className="max-w-4xl mx-auto space-y-6 md:space-y-8 animate-fade-in-up">
-          {/* Professional Headshot */}
-          <div className="flex justify-center mb-6">
-            <div className="w-32 h-32 md:w-40 md:h-40 rounded-full bg-muted/20 border-4 border-accent/50 overflow-hidden shadow-glow">
-              <img
-                src="/placeholder.svg"
-                alt="Aman Ullah - Professional Headshot"
-                className="w-full h-full object-cover"
-              />
+      {/* Content - Full Width */}
+      <div 
+        className={`w-full px-6 md:px-12 lg:px-16 z-10 transition-opacity duration-500 ${
+          isVisible ? 'opacity-100' : 'opacity-0'
+        }`}
+      >
+        <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12 max-w-[1800px] mx-auto">
+          {/* Text Content - Left Side */}
+          <div className="w-full md:w-3/5 space-y-6 text-left">
+            {/* Name as standalone heading */}
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight pb-2 inline-block"
+                style={{ textShadow: '0 2px 4px rgba(0, 0, 0, 0.2)' }}>
+              Aman Ullah
+              <div className="h-2 bg-gradient-to-r from-[#2DD4BF] to-[#3B82F6] mt-2 rounded-full"></div>
+            </h1>
+            
+            {/* Title below name with gradient and animation */}
+            <h2 
+              className={`text-[1.8rem] md:text-[2.2rem] font-bold mt-4 tracking-wide transition-transform duration-500 ${
+                titleAnimated ? 'scale-100' : 'scale-105'
+              }`}
+              style={{ 
+                background: 'linear-gradient(to right, #2DD4BF, #FFFFFF)', 
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+                textFillColor: 'transparent',
+                textShadow: '0 2px 4px rgba(0, 0, 0, 0.15)',
+                marginBottom: '0.5rem'
+              }}
+            >
+              Senior Software Engineer | Android Development Expert
+            </h2>
+            
+            {/* Profile text with enhanced styling - White background */}
+            <div 
+              className={`mt-6 rounded-xl backdrop-blur-sm transition-all duration-500 delay-500 ${
+                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+              }`}
+              style={{
+                background: 'rgba(255, 255, 255, 0.92)',
+                padding: '1.75rem',
+                border: '1px solid #2DD4BF',
+                boxShadow: '0 8px 20px rgba(0, 0, 0, 0.15)'
+              }}
+            >
+              <p className="text-[1.7rem] text-[#0F172A] leading-[1.7]" style={{ fontFamily: 'Inter, Roboto, sans-serif' }}>
+                Dynamic Senior Software Engineer with <span className="font-bold text-[#1E3A8A] border-b-2 border-[#2DD4BF]">5+ years of experience and 50+ Android apps</span>, 
+                garnering <span className="font-bold text-[#1E3A8A] border-b-2 border-[#2DD4BF]">millions of downloads globally</span> using Java, Kotlin, 
+                and Jetpack Compose with Clean Architecture. I craft cutting-edge mobile solutions that captivate users 
+                and drive engagement. Passionate about building scalable, innovative apps, I shine in Android development, 
+                API integration, and mentorship. Masterful in Kotlin, Jetpack Compose, and MVVM, I'm primed to deliver 
+                game-changing mobile experiences for any industry.
+              </p>
+            </div>
+            
+            {/* CTA Buttons with enhanced styling */}
+            <div className="flex flex-col sm:flex-row items-start gap-4 pt-6">
+              <Button
+                size="lg"
+                onClick={scrollToPortfolio}
+                className="bg-[#2DD4BF] hover:bg-[#1E3A8A] text-white hover:text-[#2DD4BF] font-bold px-6 py-6 
+                  transition-all duration-300 hover:scale-105 group rounded-[30px]
+                  shadow-[0_4px_12px_rgba(45,212,191,0.4)] hover:shadow-[0_4px_12px_rgba(45,212,191,0.6)]
+                  relative overflow-hidden"
+              >
+                {/* Shimmer effect overlay */}
+                <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/30 to-transparent 
+                  -translate-x-full animate-[shimmer_2s_infinite]"></span>
+                Discover My Work
+                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                onClick={downloadCV}
+                className="bg-[#1E3A8A] hover:bg-[#2DD4BF] text-white hover:text-[#1E3A8A] 
+                  border-[1px] border-[#2DD4BF] font-bold px-6 py-6 
+                  transition-all duration-300 hover:scale-105 rounded-[30px]
+                  shadow-[0_4px_12px_rgba(30,58,138,0.4)] hover:shadow-[0_4px_12px_rgba(45,212,191,0.4)]"
+              >
+                <Download className="mr-2 h-5 w-5" />
+                Download CV
+              </Button>
             </div>
           </div>
           
-          <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-primary-foreground leading-tight">
-            Aman Ullah - Senior Software Engineer | Android Development Expert
-          </h1>
-          <p className="text-base md:text-lg lg:text-xl text-primary-foreground/90 max-w-3xl mx-auto leading-relaxed">
-            Dynamic Senior Software Engineer with <span className="font-bold text-accent">5+ years of experience and 50+ Android apps</span>, 
-            garnering <span className="font-bold text-accent">millions of downloads globally</span> using Java, Kotlin, 
-            and Jetpack Compose with Clean Architecture. I craft cutting-edge mobile solutions that captivate users 
-            and drive engagement. Passionate about building scalable, innovative apps, I shine in Android development, 
-            API integration, and mentorship. Masterful in Kotlin, Jetpack Compose, and MVVM, I'm primed to deliver 
-            game-changing mobile experiences for any industry.
-          </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-            <Button
-              size="lg"
-              onClick={scrollToPortfolio}
-              className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-glow transition-all hover:scale-105 group"
-            >
-              Discover My Portfolio
-              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary transition-all"
-            >
-              <Download className="mr-2 h-5 w-5" />
-              Download CV
-            </Button>
+          {/* Portrait Image - Right Side */}
+          <div className="w-full md:w-2/5 flex justify-center md:justify-end">
+            <div className="relative">
+              {/* Circular portrait with shadow and animation */}
+              <div 
+                className="w-72 h-72 md:w-[440px] md:h-[440px] rounded-full overflow-hidden 
+                  transition-all duration-500 ease-in-out border-2 border-[#2DD4BF]"
+                style={{
+                  boxShadow: '0 8px 24px rgba(0, 0, 0, 0.2)',
+                }}
+              >
+                <img
+                  src={amanPortrait}
+                  alt="Aman Ullah - Professional Headshot"
+                  className="w-full h-full object-cover"
+                  style={{ maxWidth: '100%' }}
+                />
+              </div>
+              
+              {/* Decorative circle animation */}
+              <div className="absolute -inset-4 rounded-full border-2 border-[#2DD4BF]/30 animate-pulse"></div>
+              <div className="absolute -inset-8 rounded-full border-2 border-[#2DD4BF]/20 animate-pulse animation-delay-500"></div>
+            </div>
           </div>
         </div>
+        
+        {/* Horizontal Divider */}
+        <div className="mt-12 w-full h-[2px] bg-gradient-to-r from-transparent via-[#2DD4BF] to-transparent max-w-[1800px] mx-auto"></div>
       </div>
 
       {/* Scroll Indicator */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-primary-foreground/50 rounded-full flex items-start justify-center p-2">
-          <div className="w-1 h-3 bg-primary-foreground/50 rounded-full" />
+        <div className="w-6 h-10 border-2 border-white/50 rounded-full flex items-start justify-center p-2">
+          <div className="w-1 h-3 bg-white/50 rounded-full" />
         </div>
       </div>
     </section>
