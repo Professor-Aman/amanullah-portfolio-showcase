@@ -28,14 +28,22 @@ const Hero = () => {
       {/* Content */}
       <div className="container mx-auto px-4 z-10 text-center">
         <div className="max-w-4xl mx-auto space-y-6 md:space-y-8 animate-fade-in-up">
+          {/* Professional Headshot */}
+          <div className="flex justify-center mb-6">
+            <div className="w-32 h-32 md:w-40 md:h-40 rounded-full bg-muted/20 border-4 border-accent/50 overflow-hidden shadow-glow">
+              <img
+                src="/placeholder.svg"
+                alt="Aman Ullah - Professional Headshot"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+          
           <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-primary-foreground leading-tight">
-            Aman Ullah
+            Aman Ullah - Senior Software Engineer | Android Development Expert
           </h1>
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-accent">
-            Senior Software Engineer | Android Development Expert
-          </h2>
           <p className="text-base md:text-lg lg:text-xl text-primary-foreground/90 max-w-3xl mx-auto leading-relaxed">
-            Dynamic Senior Software Engineer with <span className="font-bold text-accent">50+ Android apps</span>, 
+            Dynamic Senior Software Engineer with <span className="font-bold text-accent">5+ years of experience and 50+ Android apps</span>, 
             garnering <span className="font-bold text-accent">millions of downloads globally</span> using Java, Kotlin, 
             and Jetpack Compose with Clean Architecture. I craft cutting-edge mobile solutions that captivate users 
             and drive engagement. Passionate about building scalable, innovative apps, I shine in Android development, 
@@ -48,7 +56,7 @@ const Hero = () => {
               onClick={scrollToPortfolio}
               className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-glow transition-all hover:scale-105 group"
             >
-              Explore My Portfolio
+              Discover My Portfolio
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Button>
             <Button

@@ -43,35 +43,58 @@ const Contact = () => {
             Looking for an experienced Android developer? Let's discuss how I can help bring your mobile vision to life.
           </p>
 
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
-            <Card className="p-8 shadow-medium hover:shadow-strong transition-all bg-gradient-card">
-              <div className="flex items-center gap-4 mb-4">
-                <div className="p-3 bg-accent/10 rounded-lg">
-                  <Mail className="w-6 h-6 text-accent" />
+          <div className="grid md:grid-cols-3 gap-6 mb-12">
+            <Card className="p-6 shadow-medium hover:shadow-strong transition-all bg-gradient-card">
+              <div className="flex items-center gap-3 mb-3">
+                <div className="p-2 bg-accent/10 rounded-lg">
+                  <Mail className="w-5 h-5 text-accent" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-primary">Email</h3>
-                  <p className="text-sm text-muted-foreground">[Your Email]</p>
+                  <h3 className="font-semibold text-primary text-sm">Email</h3>
                 </div>
               </div>
-              <p className="text-sm text-muted-foreground">
-                Feel free to reach out for Android development opportunities or collaborations.
-              </p>
+              <a 
+                href="mailto:amanakmal305@gmail.com" 
+                className="text-sm text-accent hover:underline break-all"
+              >
+                amanakmal305@gmail.com
+              </a>
             </Card>
 
-            <Card className="p-8 shadow-medium hover:shadow-strong transition-all bg-gradient-card">
-              <div className="flex items-center gap-4 mb-4">
-                <div className="p-3 bg-accent/10 rounded-lg">
-                  <Linkedin className="w-6 h-6 text-accent" />
+            <Card className="p-6 shadow-medium hover:shadow-strong transition-all bg-gradient-card">
+              <div className="flex items-center gap-3 mb-3">
+                <div className="p-2 bg-accent/10 rounded-lg">
+                  <Linkedin className="w-5 h-5 text-accent" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-primary">LinkedIn</h3>
-                  <p className="text-sm text-muted-foreground">[Your LinkedIn]</p>
+                  <h3 className="font-semibold text-primary text-sm">LinkedIn</h3>
                 </div>
               </div>
-              <p className="text-sm text-muted-foreground">
-                Connect with me on LinkedIn to explore my professional network and experience.
-              </p>
+              <a 
+                href="https://www.linkedin.com/in/aman-ullah" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm text-accent hover:underline"
+              >
+                linkedin.com/in/aman-ullah
+              </a>
+            </Card>
+
+            <Card className="p-6 shadow-medium hover:shadow-strong transition-all bg-gradient-card">
+              <div className="flex items-center gap-3 mb-3">
+                <div className="p-2 bg-accent/10 rounded-lg">
+                  <Send className="w-5 h-5 text-accent" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-primary text-sm">Phone</h3>
+                </div>
+              </div>
+              <a 
+                href="tel:+923409002808" 
+                className="text-sm text-accent hover:underline"
+              >
+                +92 340 900 2808
+              </a>
             </Card>
           </div>
 

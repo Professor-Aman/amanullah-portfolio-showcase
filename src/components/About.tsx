@@ -11,38 +11,20 @@ const About = () => {
           </h2>
           <div className="w-24 h-1 bg-accent mx-auto mb-12" />
 
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
-            <Card className="p-8 shadow-medium hover:shadow-strong transition-all hover:scale-105 bg-gradient-card">
-              <div className="flex items-center gap-4 mb-4">
-                <div className="p-3 bg-accent/10 rounded-lg">
-                  <Target className="w-8 h-8 text-accent" />
-                </div>
-                <h3 className="text-2xl font-semibold text-primary">Professional</h3>
+          <Card className="p-8 md:p-10 shadow-medium hover:shadow-strong transition-all bg-gradient-card mb-12">
+            <div className="flex items-center gap-4 mb-6">
+              <div className="p-3 bg-accent/10 rounded-lg">
+                <Target className="w-8 h-8 text-accent" />
               </div>
-              <p className="text-muted-foreground leading-relaxed">
-                Dynamic Senior Software Engineer passionate about crafting cutting-edge mobile solutions that 
-                captivate users and drive engagement. With expertise in Android development, API integration, 
-                and team mentorship, I deliver scalable, innovative applications across industries.
-              </p>
-            </Card>
-
-            <Card className="p-8 shadow-medium hover:shadow-strong transition-all hover:scale-105 bg-gradient-card">
-              <div className="flex items-center gap-4 mb-4">
-                <div className="p-3 bg-accent/10 rounded-lg">
-                  <GraduationCap className="w-8 h-8 text-accent" />
-                </div>
-                <h3 className="text-2xl font-semibold text-primary">Education</h3>
-              </div>
-              <p className="text-muted-foreground leading-relaxed mb-4">
-                <span className="font-semibold text-foreground">Bachelor of Computer Science</span>
-              </p>
-              <p className="text-sm text-muted-foreground">
-                <span className="font-medium text-accent">Final Year Project:</span> Online Learning Management System 
-                featuring comprehensive course management, secure user authentication, and efficient content delivery 
-                mechanisms.
-              </p>
-            </Card>
-          </div>
+              <h3 className="text-2xl md:text-3xl font-semibold text-primary">Professional Profile</h3>
+            </div>
+            <p className="text-muted-foreground leading-relaxed text-lg">
+              Dynamic Senior Software Engineer with <span className="font-bold text-accent">5+ years of experience</span> passionate 
+              about crafting cutting-edge mobile solutions that captivate users and drive engagement. With expertise in Android development, 
+              API integration, and team mentorship, I deliver scalable, innovative applications across industries. Masterful in Kotlin, 
+              Jetpack Compose, and MVVM architecture, I'm driven to build game-changing mobile experiences that make a lasting impact.
+            </p>
+          </Card>
 
           <Card className="p-8 shadow-medium bg-primary text-primary-foreground">
             <div className="flex items-center gap-4 mb-6">
