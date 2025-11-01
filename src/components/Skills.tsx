@@ -57,12 +57,12 @@ const Skills = () => {
   return (
     <section id="skills" className="py-20 md:py-32 bg-background">
       <div className="container mx-auto px-4">
-        <div className="max-w-6xl mx-auto">
+        <div className="w-full px-6 md:px-12 lg:px-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-4 text-primary">
             Technical Skills
           </h2>
           <div className="w-24 h-1 bg-accent mx-auto mb-6" />
-          <p className="text-center text-muted-foreground mb-16 max-w-2xl mx-auto">
+          <p className="text-center text-muted-foreground mb-16 px-6 md:px-12 lg:px-16 text-[1.05rem] md:text-[1.1rem]">
             Expert in building high-performance Android apps with scalable architectures
           </p>
 

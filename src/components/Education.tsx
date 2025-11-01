@@ -5,7 +5,7 @@ const Education = () => {
   return (
     <section id="education" className="py-20 md:py-32 bg-background">
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto">
+        <div className="w-full px-6 md:px-12 lg:px-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-4 text-primary">
             Education
           </h2>
@@ -44,7 +44,7 @@ const Education = () => {
               </div>
 
               <div className="mt-6 p-4 bg-muted/30 rounded-lg">
-                <p className="text-sm text-muted-foreground leading-relaxed">
+                <p className="text-muted-foreground leading-relaxed text-[1.05rem] md:text-[1.1rem]">
                   <span className="font-semibold text-foreground">Academic Foundation:</span> Built strong foundation in software 
                   engineering principles, data structures, algorithms, and mobile application development, which laid the groundwork 
                   for a successful career in Android development.

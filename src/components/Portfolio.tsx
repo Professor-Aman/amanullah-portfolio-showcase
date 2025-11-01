@@ -15,12 +15,12 @@ const Portfolio = () => {
   return (
     <section id="portfolio" className="py-20 md:py-32 bg-muted/30">
       <div className="container mx-auto px-4">
-        <div className="max-w-7xl mx-auto">
+        <div className="w-full px-6 md:px-12 lg:px-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-4 text-primary">
             Portfolio
           </h2>
           <div className="w-24 h-1 bg-accent mx-auto mb-6" />
-          <p className="text-center text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-center text-muted-foreground mb-12 leading-relaxed px-6 md:px-12 lg:px-16 text-[1.05rem] md:text-[1.1rem]">
             Engineered <span className="font-bold text-accent">50+ Android apps</span>, achieving{" "}
             <span className="font-bold text-accent">millions of downloads worldwide</span> using Java, Kotlin, 
             and Jetpack Compose. Leveraged MVVM and Clean Architecture to build scalable, maintainable mobile 

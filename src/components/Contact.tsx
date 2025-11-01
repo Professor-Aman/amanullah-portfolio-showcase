@@ -34,12 +34,12 @@ const Contact = () => {
   return (
     <section id="contact" className="py-20 md:py-32 bg-background">
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto">
+        <div className="w-full px-6 md:px-12 lg:px-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-4 text-primary">
             Get In Touch
           </h2>
           <div className="w-24 h-1 bg-accent mx-auto mb-6" />
-          <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+          <p className="text-center text-muted-foreground mb-12 px-6 md:px-12 lg:px-16 text-[1.05rem] md:text-[1.1rem]">
             Looking for an experienced Android developer? Let's discuss how I can help bring your mobile vision to life.
           </p>
 
@@ -158,18 +158,13 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   rows={6}
-                  placeholder="Tell me about your project or opportunity..."
-                  className="border-input focus:border-accent resize-none"
+                  placeholder="Tell me about your project or position..."
+                  className="border-input focus:border-accent"
                 />
               </div>
 
-              <Button
-                type="submit"
-                size="lg"
-                className="w-full bg-accent hover:bg-accent/90 text-accent-foreground shadow-glow transition-all hover:scale-[1.02]"
-              >
+              <Button type="submit" className="w-full md:w-auto bg-accent text-accent-foreground hover:bg-accent/90">
                 Send Message
-                <Send className="ml-2 h-5 w-5" />
               </Button>
             </form>
           </Card>

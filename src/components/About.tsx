@@ -5,7 +5,7 @@ const About = () => {
   return (
     <section id="about" className="py-20 md:py-32 bg-background">
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto">
+        <div className="w-full px-6 md:px-12 lg:px-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-4 text-primary">
             About Me
           </h2>
@@ -18,7 +18,7 @@ const About = () => {
               </div>
               <h3 className="text-2xl md:text-3xl font-semibold text-primary">Professional Profile</h3>
             </div>
-            <p className="text-muted-foreground leading-relaxed text-lg">
+            <p className="text-muted-foreground leading-relaxed text-[1.05rem] md:text-[1.1rem]">
               Dynamic Senior Software Engineer with <span className="font-bold text-accent">5+ years of experience</span> passionate 
               about crafting cutting-edge mobile solutions that captivate users and drive engagement. With expertise in Android development, 
               API integration, and team mentorship, I deliver scalable, innovative applications across industries. Masterful in Kotlin, 

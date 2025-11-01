@@ -55,8 +55,6 @@ const Navigation = () => {
               background: 'linear-gradient(to right, #2DD4BF, #FFFFFF)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
-              backgroundClip: 'text',
-              textFillColor: 'transparent',
               textShadow: '0 2px 4px rgba(0, 0, 0, 0.3)'
             }}
           >

@@ -1,7 +1,7 @@
 import { ArrowRight, Download, Code, Smartphone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import amanPortrait from "@/assets/aman-portrait.jpg";
-import heroBg from "@/assets/hero-bg.jpg";
+
 import { useEffect, useState } from "react";
 
 const Hero = () => {
@@ -51,16 +51,10 @@ const Hero = () => {
       id="home"
       className="relative min-h-screen flex items-center justify-center overflow-hidden w-full"
     >
-      {/* Background Image */}
-      <div className="absolute inset-0 z-0">
-        <img 
-          src={heroBg} 
-          alt="Background" 
-          className="w-full h-full object-cover"
-          style={{ filter: 'brightness(0.7)' }} 
-        />
-        <div className="absolute inset-0 bg-black opacity-40"></div>
-      </div>
+      {/* Pastel Gradient Background (pixel-perfect) */}
+      <div className="absolute inset-0 z-0" style={{
+        background: 'linear-gradient(to right,rgb(7, 3, 20) 0%,rgb(13, 5, 31) 50%,rgb(12, 32, 65) 100%)'
+      }} />
       
       {/* Subtle particle/code background effect */}
       <div className="absolute inset-0 z-1 opacity-10">
@@ -81,7 +75,7 @@ const Hero = () => {
           isVisible ? 'opacity-100' : 'opacity-0'
         }`}
       >
-        <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12 max-w-[1800px] mx-auto">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12 w-full">
           {/* Text Content - Left Side */}
           <div className="w-full md:w-3/5 space-y-6 text-left">
             {/* Name as standalone heading */}
@@ -102,6 +96,8 @@ const Hero = () => {
                 WebkitTextFillColor: 'transparent',
                 backgroundClip: 'text',
                 textFillColor: 'transparent',
+                backgroundClip: 'text',
+                textFillColor: 'transparent',
                 textShadow: '0 2px 4px rgba(0, 0, 0, 0.15)',
                 marginBottom: '0.5rem'
               }}
@@ -111,24 +107,61 @@ const Hero = () => {
             
             {/* Profile text with enhanced styling - White background */}
             <div 
-              className={`mt-6 rounded-xl backdrop-blur-sm transition-all duration-500 delay-500 ${
+              className={`mt-6 rounded-[20px] backdrop-blur-xl transition-all duration-500 delay-500 ${
                 isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
               }`}
               style={{
-                background: 'rgba(255, 255, 255, 0.92)',
-                padding: '1.75rem',
-                border: '1px solid #2DD4BF',
-                boxShadow: '0 8px 20px rgba(0, 0, 0, 0.15)'
+                background: 'rgba(0, 0, 0, 0.71)',
+                padding: '2rem',
+                border: '1px solid rgba(255, 255, 255, 0.4)',
+                boxShadow: '0 24px 48px rgba(0, 0, 0, 0.35)'
               }}
             >
-              <p className="text-[1.7rem] text-[#0F172A] leading-[1.7]" style={{ fontFamily: 'Inter, Roboto, sans-serif' }}>
-                Dynamic Senior Software Engineer with <span className="font-bold text-[#1E3A8A] border-b-2 border-[#2DD4BF]">5+ years of experience and 50+ Android apps</span>, 
-                garnering <span className="font-bold text-[#1E3A8A] border-b-2 border-[#2DD4BF]">millions of downloads globally</span> using Java, Kotlin, 
-                and Jetpack Compose with Clean Architecture. I craft cutting-edge mobile solutions that captivate users 
-                and drive engagement. Passionate about building scalable, innovative apps, I shine in Android development, 
-                API integration, and mentorship. Masterful in Kotlin, Jetpack Compose, and MVVM, I'm primed to deliver 
-                game-changing mobile experiences for any industry.
-              </p>
+              <p className="text-[1.9rem] md:text-[2.1rem] lg:text-[2.3rem] leading-[1.75] md:leading-[1.85] tracking-wide font-light"
+   style={{ 
+     color: '#f0f9ff', 
+     fontFamily: 'Inter, Roboto, "Helvetica Neue", sans-serif',
+     textShadow: '0 1px 3px rgba(0, 0, 0, 0.15)'
+   }}>
+  Dynamic Senior Software Engineer &amp; <span className="font-bold text-[#93c5fd] relative inline-block pb-1 
+               after:content-[''] after:absolute after:left-0 after:bottom-0 
+               after:w-full after:h-1 after:bg-gradient-to-r after:from-[#2DD4BF] after:to-[#60A5FA] 
+               after:rounded-full after:transition-all after:duration-300 
+               hover:after:h-2 hover:after:scale-x-110">
+    current Tech Lead
+  </span> with{' '}
+  <span className="font-bold text-[#93c5fd] relative inline-block pb-1 
+               after:content-[''] after:absolute after:left-0 after:bottom-0 
+               after:w-full after:h-1 after:bg-gradient-to-r after:from-[#2DD4BF] after:to-[#60A5FA] 
+               after:rounded-full after:transition-all after:duration-300 
+               hover:after:h-2 hover:after:scale-x-110">
+    5+ years of experience
+  </span>{' '}
+  building <span className="font-bold text-[#93c5fd] relative inline-block pb-1 
+               after:content-[''] after:absolute after:left-0 after:bottom-0 
+               after:w-full after:h-1 after:bg-gradient-to-r after:from-[#2DD4BF] after:to-[#60A5FA] 
+               after:rounded-full after:transition-all after:duration-300 
+               hover:after:h-2 hover:after:scale-x-110">
+    50+ Android apps
+  </span> that have garnered{' '}
+  <span className="font-bold text-[#93c5fd] relative inline-block pb-1 
+               after:content-[''] after:absolute after:left-0 after:bottom-0 
+               after:w-full after:h-1 after:bg-gradient-to-r after:from-[#2DD4BF] after:to-[#60A5FA] 
+               after:rounded-full after:transition-all after:duration-300 
+               hover:after:h-2 hover:after:scale-x-110">
+    millions of downloads globally
+  </span>.
+  <br className="hidden md:block" />
+  <strong className="font-semibold text-[#e0f2fe]">Expertise:</strong>{' '}
+  <span className="font-medium text-[#e0f2fe]">Ads Monetization (AdMob, Unity Ads)</span>,{' '}
+  <span className="font-medium text-[#e0f2fe]">App Store Optimization</span>,{' '}
+  <span className="font-medium text-[#e0f2fe]">Performance Scaling</span>, and{' '}
+  <span className="font-medium text-[#e0f2fe]">Team Leadership</span> using Java, Kotlin, Jetpack Compose, and Clean Architecture.
+  <br className="hidden md:block" />
+  I craft <span className="font-medium text-[#e0f2fe]">cutting-edge mobile solutions</span> that maximize revenue, captivate users, and drive engagement. 
+  Passionate about <span className="font-medium text-[#e0f2fe]">scalable architecture</span> and <span className="font-semibold text-[#93c5fd]">mentoring developers</span>, 
+  I deliver <span className="font-semibold text-[#93c5fd]">game-changing mobile experiences</span> for any industry.
+</p>
             </div>
             
             {/* CTA Buttons with enhanced styling */}
@@ -136,7 +169,7 @@ const Hero = () => {
               <Button
                 size="lg"
                 onClick={scrollToPortfolio}
-                className="bg-[#2DD4BF] hover:bg-[#1E3A8A] text-white hover:text-[#2DD4BF] font-bold px-6 py-6 
+                className="bg-[#2DD4BF] hover:bg-[#1E3A8A] text-white hover:text-[#2DD4BF] font-bold px-7 py-7 
                   transition-all duration-300 hover:scale-105 group rounded-[30px]
                   shadow-[0_4px_12px_rgba(45,212,191,0.4)] hover:shadow-[0_4px_12px_rgba(45,212,191,0.6)]
                   relative overflow-hidden"
@@ -145,18 +178,18 @@ const Hero = () => {
                 <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/30 to-transparent 
                   -translate-x-full animate-[shimmer_2s_infinite]"></span>
                 Discover My Work
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="ml-2 h-6 w-6 group-hover:translate-x-1 transition-transform" />
               </Button>
               <Button
                 size="lg"
                 variant="outline"
                 onClick={downloadCV}
                 className="bg-[#1E3A8A] hover:bg-[#2DD4BF] text-white hover:text-[#1E3A8A] 
-                  border-[1px] border-[#2DD4BF] font-bold px-6 py-6 
+                  border-[1px] border-[#2DD4BF] font-bold px-7 py-7 
                   transition-all duration-300 hover:scale-105 rounded-[30px]
                   shadow-[0_4px_12px_rgba(30,58,138,0.4)] hover:shadow-[0_4px_12px_rgba(45,212,191,0.4)]"
               >
-                <Download className="mr-2 h-5 w-5" />
+                <Download className="mr-2 h-6 w-6" />
                 Download CV
               </Button>
             </div>
@@ -189,7 +222,7 @@ const Hero = () => {
         </div>
         
         {/* Horizontal Divider */}
-        <div className="mt-12 w-full h-[2px] bg-gradient-to-r from-transparent via-[#2DD4BF] to-transparent max-w-[1800px] mx-auto"></div>
+        <div className="mt-12 w-full h-[2px] bg-gradient-to-r from-transparent via-[#2DD4BF] to-transparent"></div>
       </div>
 
       {/* Scroll Indicator */}
