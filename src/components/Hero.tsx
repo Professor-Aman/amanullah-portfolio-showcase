@@ -49,7 +49,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden w-full"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden w-full pt-20 md:pt-24"
     >
       {/* Pastel Gradient Background (pixel-perfect) */}
       <div className="absolute inset-0 z-0" style={{
@@ -79,15 +79,15 @@ const Hero = () => {
           {/* Text Content - Left Side */}
           <div className="w-full md:w-3/5 space-y-6 text-left">
             {/* Name as standalone heading */}
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight pb-2 inline-block"
-                style={{ textShadow: '0 2px 4px rgba(0, 0, 0, 0.2)' }}>
-              Aman Ullah
-              <div className="h-2 bg-gradient-to-r from-[#2DD4BF] to-[#3B82F6] mt-2 rounded-full"></div>
-            </h1>
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-white leading-tight pb-1 inline-block"
+    style={{ textShadow: '0 2px 4px rgba(0, 0, 0, 0.2)' }}>
+  Aman Ullah
+  <div className="h-2 w-24 md:w-32 bg-gradient-to-r from-[#2DD4BF] to-[#3B82F6] mt-1 rounded-full"></div>
+</h1>
             
             {/* Title below name with gradient and animation */}
             <h2 
-              className={`text-[1.8rem] md:text-[2.2rem] font-bold mt-4 tracking-wide transition-transform duration-500 ${
+              className={`text-[1.8rem] md:text-[1.5rem] font-bold mt-4 tracking-wide transition-transform duration-500 ${
                 titleAnimated ? 'scale-100' : 'scale-105'
               }`}
 
