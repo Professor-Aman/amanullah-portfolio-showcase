@@ -1,6 +1,6 @@
 import { ArrowRight, Download, Code, Smartphone } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import amanPortrait from "@/assets/aman-portrait.jpg";
+import amanPortrait from "@/assets/aman-portrait.png";
 
 import { useEffect, useState } from "react";
 
@@ -90,17 +90,16 @@ const Hero = () => {
               className={`text-[1.8rem] md:text-[2.2rem] font-bold mt-4 tracking-wide transition-transform duration-500 ${
                 titleAnimated ? 'scale-100' : 'scale-105'
               }`}
+
               style={{ 
-                background: 'linear-gradient(to right, #2DD4BF, #FFFFFF)', 
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                backgroundClip: 'text',
-                textFillColor: 'transparent',
-                backgroundClip: 'text',
-                textFillColor: 'transparent',
-                textShadow: '0 2px 4px rgba(0, 0, 0, 0.15)',
-                marginBottom: '0.5rem'
-              }}
+  background: 'linear-gradient(to right, #2DD4BF, #FFFFFF)',
+  backgroundClip: 'text',
+  WebkitBackgroundClip: 'text',
+  color: 'transparent',
+  WebkitTextFillColor: 'transparent',
+  textShadow: '0 2px 4px rgba(0, 0, 0, 0.15)',
+  marginBottom: '0.5rem'
+}}
             >
               Senior Software Engineer | Android Development Expert
             </h2>
@@ -117,51 +116,12 @@ const Hero = () => {
                 boxShadow: '0 24px 48px rgba(0, 0, 0, 0.35)'
               }}
             >
-              <p className="text-[1.9rem] md:text-[2.1rem] lg:text-[2.3rem] leading-[1.75] md:leading-[1.85] tracking-wide font-light"
-   style={{ 
-     color: '#f0f9ff', 
-     fontFamily: 'Inter, Roboto, "Helvetica Neue", sans-serif',
-     textShadow: '0 1px 3px rgba(0, 0, 0, 0.15)'
-   }}>
-  Dynamic Senior Software Engineer &amp; <span className="font-bold text-[#93c5fd] relative inline-block pb-1 
-               after:content-[''] after:absolute after:left-0 after:bottom-0 
-               after:w-full after:h-1 after:bg-gradient-to-r after:from-[#2DD4BF] after:to-[#60A5FA] 
-               after:rounded-full after:transition-all after:duration-300 
-               hover:after:h-2 hover:after:scale-x-110">
-    current Tech Lead
-  </span> with{' '}
-  <span className="font-bold text-[#93c5fd] relative inline-block pb-1 
-               after:content-[''] after:absolute after:left-0 after:bottom-0 
-               after:w-full after:h-1 after:bg-gradient-to-r after:from-[#2DD4BF] after:to-[#60A5FA] 
-               after:rounded-full after:transition-all after:duration-300 
-               hover:after:h-2 hover:after:scale-x-110">
-    5+ years of experience
-  </span>{' '}
-  building <span className="font-bold text-[#93c5fd] relative inline-block pb-1 
-               after:content-[''] after:absolute after:left-0 after:bottom-0 
-               after:w-full after:h-1 after:bg-gradient-to-r after:from-[#2DD4BF] after:to-[#60A5FA] 
-               after:rounded-full after:transition-all after:duration-300 
-               hover:after:h-2 hover:after:scale-x-110">
-    50+ Android apps
-  </span> that have garnered{' '}
-  <span className="font-bold text-[#93c5fd] relative inline-block pb-1 
-               after:content-[''] after:absolute after:left-0 after:bottom-0 
-               after:w-full after:h-1 after:bg-gradient-to-r after:from-[#2DD4BF] after:to-[#60A5FA] 
-               after:rounded-full after:transition-all after:duration-300 
-               hover:after:h-2 hover:after:scale-x-110">
-    millions of downloads globally
-  </span>.
-  <br className="hidden md:block" />
-  <strong className="font-semibold text-[#e0f2fe]">Expertise:</strong>{' '}
-  <span className="font-medium text-[#e0f2fe]">Ads Monetization (AdMob, Unity Ads)</span>,{' '}
-  <span className="font-medium text-[#e0f2fe]">App Store Optimization</span>,{' '}
-  <span className="font-medium text-[#e0f2fe]">Performance Scaling</span>, and{' '}
-  <span className="font-medium text-[#e0f2fe]">Team Leadership</span> using Java, Kotlin, Jetpack Compose, and Clean Architecture.
-  <br className="hidden md:block" />
-  I craft <span className="font-medium text-[#e0f2fe]">cutting-edge mobile solutions</span> that maximize revenue, captivate users, and drive engagement. 
-  Passionate about <span className="font-medium text-[#e0f2fe]">scalable architecture</span> and <span className="font-semibold text-[#93c5fd]">mentoring developers</span>, 
-  I deliver <span className="font-semibold text-[#93c5fd]">game-changing mobile experiences</span> for any industry.
-</p>
+              <p className="text-muted-foreground leading-relaxed text-[1.05rem] md:text-[1.1rem] text-white">
+              Dynamic Senior Software Engineer with <span className="font-bold text-accent">5+ years of experience</span> passionate 
+              about crafting cutting-edge mobile solutions that captivate users and drive engagement. With expertise in Android development, 
+              API integration, and team mentorship, I deliver scalable, innovative applications across industries. Masterful in Kotlin, 
+              Jetpack Compose, and MVVM architecture, I'm driven to build game-changing mobile experiences that make a lasting impact.
+            </p>
             </div>
             
             {/* CTA Buttons with enhanced styling */}
@@ -200,7 +160,7 @@ const Hero = () => {
             <div className="relative">
               {/* Circular portrait with shadow and animation */}
               <div 
-                className="w-72 h-72 md:w-[440px] md:h-[440px] rounded-full overflow-hidden 
+                className="w-72 h-72 md:w-[340px] md:h-[340px] rounded-full overflow-hidden 
                   transition-all duration-500 ease-in-out border-2 border-[#2DD4BF]"
                 style={{
                   boxShadow: '0 8px 24px rgba(0, 0, 0, 0.2)',

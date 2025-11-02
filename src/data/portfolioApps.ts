@@ -1,242 +1,268 @@
 export interface App {
-  name: string;
-  description: string;
-  link?: string;
-  downloads: string;
-  status?: "available" | "coming-soon";
-  category: string;
+  title: string;
+  desc: string;
+  link: string | null;
+  icon: string;
+  category?: string;
+  downloads?: string;
+  isRecent?: boolean;
 }
+
+export const categories = ["All", "Recent", "Productivity", "Tools", "Personalization", "Lifestyle", "Photography"];
 
 export const portfolioApps: App[] = [
   {
-    name: "AI Passport Photo & ID Maker",
-    description: "A smart app for creating professional passport photos and IDs with AI-powered editing tools.",
-    link: "https://play.google.com/store/apps/details?id=com.funzoft.passport.photo.maker.visa.picture",
+    title: "AI Passport Photo & ID Maker",
+    icon: "https://play-lh.googleusercontent.com/vUm7T7RUs1rws0Rcl2SyPwl6ViBHQJRg6XikBAbp7n_F4gb_nojEmL-nVmngL8v3yhAtFLzzKFv66j5S5wuHvdA=w240-h480-rw",
+    link: "https://play.google.com/store/apps/details?id=com.tas.passport.id.maker&hl=en",
+    desc: "AI-powered passport & ID photo maker",
+    category: "Productivity",
+    downloads: "1K+",
+    isRecent: true
+  },
+  {
+    title: "Pic Collage Maker Photo Editor",
+    icon: "https://play-lh.googleusercontent.com/pkk8dYZhdZXQoQ2gCaymP9cSkF_r-zIQZ6JEqvSJdSpzBNnA5DRfoDascx5KQofvLX3Izhp8zkBcHcG7gooOAt8=s64-rw",
+    link: "https://play.google.com/store/apps/details?id=com.las.collage.maker",
+    desc: "Photo collage & editing tool",
+    category: "Photography",
     downloads: "1M+",
-    status: "available",
-    category: "Productivity"
+    isRecent: true
   },
   {
-    name: "Digital Clock Lock Screen and Widgets",
-    description: "Customizable lock screen clock with widgets for time and alarms.",
-    link: "https://play.google.com/store/apps/details?id=com.digital.clock.lockscreen.time.widget",
-    downloads: "500K+",
-    status: "available",
-    category: "Personalization"
-  },
-  {
-    name: "Animated Clock",
-    description: "Dynamic clock app with analog and digital displays, alarms, and customizable widgets.",
-    link: "https://play.google.com/store/apps/details?id=com.live.animated.clock.widget.time.alarm",
-    downloads: "100K+",
-    status: "available",
-    category: "Personalization"
-  },
-  {
-    name: "Bar Code and QR Code Scanner",
-    description: "Fast, reliable app for scanning and generating QR codes and barcodes.",
-    link: "https://play.google.com/store/apps/details?id=com.qrcode.barcode.scanner.reader.generator",
+    title: "Love Photo Frame",
+    icon: "https://play-lh.googleusercontent.com/sjQvChnHs7GnaP_39HOJWo9x7XSatFK72SGVafTeoL_DvX-CFrR9TsDLsG3Q49BMHg=w240-h480-rw",
+    link: "https://play.google.com/store/apps/details?id=com.tas.ultimate.frames.editor",
+    desc: "Romantic photo frame editor",
+    category: "Photography",
     downloads: "1M+",
-    status: "available",
-    category: "Tools"
+    isRecent: true
   },
   {
-    name: "Screen Mirroring TV Cast",
-    description: "Enables seamless screen mirroring to TVs with low latency.",
-    link: "https://play.google.com/store/apps/details?id=com.screen.mirroring.smart.tv.cast.phone",
-    downloads: "500K+",
-    status: "available",
-    category: "Tools"
-  },
-  {
-    name: "Screen Casting",
-    description: "App for casting phone screens to smart TVs and devices.",
-    link: "https://play.google.com/store/apps/details?id=com.screen.mirroring.tv.remote.castto",
-    downloads: "100K+",
-    status: "available",
-    category: "Tools"
-  },
-  {
-    name: "Phone Cleaner",
-    description: "Optimizes device performance by cleaning junk files and boosting speed.",
-    link: "https://play.google.com/store/apps/details?id=com.phone.cleaner.cache.clean.booster.ram",
+    title: "Smarty Men Suit Photo Editor",
+    icon: "https://play-lh.googleusercontent.com/E4u_Kpbf8I2pUDyD6Dss6vQxYAzLT-ALQvxn68S3XVr-rXmXMM1NQCrTF_PC49VabCOc=w240-h480-rw",
+    link: "https://play.google.com/store/apps/details?id=com.ant.smarty.men.ai.photo.editor",
+    desc: "AI-based men's suit photo editor",
+    category: "Photography",
     downloads: "1M+",
-    status: "available",
-    category: "Tools"
+    isRecent: true
   },
   {
-    name: "File Manager",
-    description: "Intuitive app for managing files with easy browsing and organization.",
-    link: "https://play.google.com/store/apps/details?id=com.file.manager.browser.explorer.app",
-    downloads: "500K+",
-    status: "available",
-    category: "Productivity"
+    title: "Photo PIP Camera Collage Maker",
+    icon: "https://play-lh.googleusercontent.com/EDJZ0D6VjjTgn_-et6G46kJczHX09cUkJ_H_0AnzNc3eCFmjMBYxZ27r1wsbmAVrjcE=s64-rw",
+    link: "https://play.google.com/store/apps/details?id=com.las.pip.camera",
+    desc: "Picture-in-picture collage app",
+    category: "Photography",
+    downloads: "1M+",
+    isRecent: true
   },
   {
-    name: "Habits Tracker",
-    description: "App to track and build daily habits effectively.",
-    downloads: "N/A",
-    status: "coming-soon",
-    category: "Productivity"
+    title: "Dual Photo Frame Collage Maker",
+    icon: "https://play-lh.googleusercontent.com/YKCvKVnn9JqSlv6N2pAGrc-WI9mXiL6Lyjt8KaXNEnOzM0hCP3BzFUehY1Q9Y1zi5Pw=s64-rw",
+    link: "https://play.google.com/store/apps/details?id=com.las.dual.photo.frames",
+    desc: "Dual photo frames for collages",
+    category: "Photography",
+    downloads: "1M+",
+    isRecent: true
   },
   {
-    name: "True Muslim",
-    description: "Islamic app with prayer times, Quran, and Qibla direction.",
-    link: "https://play.google.com/store/apps/details?id=com.muslim.quran.azan.prayer.time.qibla.direction",
-    downloads: "500K+",
-    status: "available",
-    category: "Lifestyle"
+    title: "Urdu Shayari Poetry on Picture",
+    icon: "https://play-lh.googleusercontent.com/UIag8Q5vtE5XvJtqKE3v1Obwhz8ovm-Tshc7jGpAciHBppUnyJyy5HSpOfZMpxQY4fw=s64-rw",
+    link: "https://play.google.com/store/apps/details?id=com.las.urdu.shay",
+    desc: "Urdu poetry photo editor",
+    category: "Photography",
+    downloads: "1M+",
+    isRecent: true
   },
   {
-    name: "Islam Pro",
-    description: "Comprehensive app with prayer times, Qibla, and Azan alarms.",
-    link: "https://play.google.com/store/apps/details?id=com.islamicpro.quran.prayertime.azan.qibla",
+    title: "Ramadan Calendar 2025, Prayer",
+    icon: "https://play-lh.googleusercontent.com/hJ9jUkl7atz4zVCmebYhNmfOgZvDSXNxgAEX-v1twoUo_oavSunwy2vRmWNnnBZ1atI=w240-h480-rw",
+    link: "https://play.google.com/store/apps/details?id=com.ilib.ramadan.calendar",
+    desc: "Updated Ramadan schedules",
+    category: "Lifestyle",
+    downloads: "100K+"
+  },
+  {
+    title: "Perfect Body Editor For All",
+    icon: "https://play-lh.googleusercontent.com/tqe94-qS6k7rlAMMueggV-IyosrzGWNXCt3DfecrekuR2hHIGx8PvUjZ34uxhDyauRo=s64-rw",
+    link: "https://play.google.com/store/apps/details?id=com.las.body.shape.editor",
+    desc: "Body shape photo editor",
+    category: "Photography",
     downloads: "100K+",
-    status: "available",
-    category: "Lifestyle"
+    isRecent: true
   },
   {
-    name: "Dua Adkar",
-    description: "Collection of Islamic supplications and reminders.",
-    link: "https://play.google.com/store/apps/details?id=com.dua.azkar.islamicpro.muslim.prayer",
+    title: "Air Horn, Fart & Haircut Prank",
+    icon: "https://play-lh.googleusercontent.com/JaP7qococ7musl5bV6auMK42pxYD6crNyl3UiUxqnLBiacHc6K4DFSCYxlHYGn2X1JA=w240-h480-rw",
+    link: "https://play.google.com/store/apps/details?id=com.ots.prank.sound",
+    desc: "Prank sound effects app",
+    category: "Entertainment",
     downloads: "100K+",
-    status: "available",
-    category: "Lifestyle"
+    isRecent: true
   },
   {
-    name: "Ramadan Calendar",
-    description: "Schedules for Ramadan prayers and fasting.",
-    link: "https://play.google.com/store/apps/details?id=com.ramadan.calendar.muslim.quran.prayer.time",
-    downloads: "50K+",
-    status: "available",
-    category: "Lifestyle"
-  },
-  {
-    name: "My Mosque 360 Qibla Direction",
-    description: "App for prayer times and accurate Qibla direction.",
-    link: "https://play.google.com/store/apps/details?id=com.mosque.qiblafinder.prayertimes.quran",
+    title: "Photo Collage Maker & Grid Art",
+    icon: "https://play-lh.googleusercontent.com/zQQQVOL1q6hyr-lpl0f2qD6ZlpmOwdxjGXQrP0h6_E12W6K1fp2QItzwUV3OKO6A9w=w240-h480-rw",
+    link: "https://play.google.com/store/apps/details?id=com.tas.collage.maker.ai",
+    desc: "Advanced collage maker with grids",
+    category: "Photography",
     downloads: "100K+",
-    status: "available",
-    category: "Lifestyle"
+    isRecent: true
   },
   {
-    name: "Document Scanner",
-    description: "Scans documents with high-quality output.",
-    downloads: "N/A",
-    status: "coming-soon",
-    category: "Productivity"
+    title: "Digital Clock Lock Screen and Widgets",
+    icon: "https://play-lh.googleusercontent.com/Lay1Nh_FyZMEoQB6himX3oGa_UoY2tJWU51uiTFlsU6h2jonywVaRwQALTsci7mqW7PN=w240-h480-rw",
+    link: "https://play.google.com/store/apps/details?id=com.lockscreen.smartclockapp",
+    desc: "Customizable digital clock widgets",
+    category: "Personalization",
+    downloads: "500K+"
   },
   {
-    name: "Languages Translator",
-    description: "Translates text and speech across multiple languages.",
-    link: "https://play.google.com/store/apps/details?id=com.all.language.translate.voice.text.camera.translator",
-    downloads: "500K+",
-    status: "available",
-    category: "Tools"
+    title: "Animated Clock",
+    icon: "https://play-lh.googleusercontent.com/Lay1Nh_FyZMEoQB6himX3oGa_UoY2tJWU51uiTFlsU6h2jonywVaRwQALTsci7mqW7PN=w240-h480-rw",
+    link: "https://play.google.com/store/apps/details?id=com.lockscreen.clockwidget.alarmclock.timeclock.digitalclock.analogclock.nightclock",
+    desc: "Dynamic analog & digital clock with alarms",
+    category: "Personalization",
+    downloads: "500K+"
   },
   {
-    name: "Thumbnail Maker AI",
-    description: "AI-powered app for creating professional thumbnails.",
-    downloads: "N/A",
-    status: "coming-soon",
-    category: "Productivity"
+    title: "Bar Code and QR Code Scanner",
+    icon: "https://play-lh.googleusercontent.com/0jyhTIvG45Di7UktWaoXDN25bvD59OEWTpD9lATBb1OHEwpvmGh1lRO0GWAZmXBAVQE=w240-h480-rw",
+    link: "https://play.google.com/store/apps/details?id=com.qrcodereader.barcodescanner.qrscannerapp.qrcodegenerator",
+    desc: "Fast QR & barcode scanner/generator",
+    category: "Tools",
+    downloads: "10K+"
   },
   {
-    name: "Smarty Men Suit Photo Editor",
-    description: "AI-based photo editor for men's suit designs.",
-    link: "https://play.google.com/store/apps/details?id=com.men.suit.photo.editor.man.hairstyle.montage",
-    downloads: "100K+",
-    status: "available",
-    category: "Photography"
+    title: "Screen Mirroring TV Cast",
+    icon: "https://play-lh.googleusercontent.com/KMAsRFLcAEW6iM4JyD0mzT0jod530EoRDjoBDBcukeewaqSnqjj-NBu2911XYKxo2W2T=w240-h480-rw",
+    link: "https://play.google.com/store/apps/details?id=com.miracast.screenmirroring.smartview.tvcast.wirelessdisplay.mirrorapp",
+    desc: "Cast phone to TV wirelessly",
+    category: "Tools",
+    downloads: "1K+"
   },
   {
-    name: "Pic Collage Maker Photo Editor",
-    description: "App for creating photo collages with editing tools.",
-    link: "https://play.google.com/store/apps/details?id=com.pic.collage.photo.editor.frame.maker.grid.art",
-    downloads: "100K+",
-    status: "available",
-    category: "Photography"
+    title: "Screen Casting",
+    icon: "https://play-lh.googleusercontent.com/KMAsRFLcAEW6iM4JyD0mzT0jod530EoRDjoBDBcukeewaqSnqjj-NBu2911XYKxo2W2T=w240-h480-rw",
+    link: "https://play.google.com/store/apps/details?id=com.frixapps.casttotv",
+    desc: "Mirror screen to smart TVs",
+    category: "Tools",
+    downloads: "5M+"
   },
   {
-    name: "Photo PIP Camera Collage Maker",
-    description: "Picture-in-picture photo editing and collage app.",
-    link: "https://play.google.com/store/apps/details?id=com.photo.pip.camera.collage.maker.editor.picture.frame",
-    downloads: "50K+",
-    status: "available",
-    category: "Photography"
+    title: "Phone Cleaner",
+    icon: "Non",
+    link: null,
+    desc: "Junk cleaner & performance booster",
+    category: "Tools",
+    downloads: null
   },
   {
-    name: "Dual Photo Frame Collage Maker",
-    description: "Combines dual photos with customizable frames.",
-    link: "https://play.google.com/store/apps/details?id=com.dual.photo.frame.collage.maker.picture.love.couple",
-    downloads: "50K+",
-    status: "available",
-    category: "Photography"
+    title: "File Manager",
+    icon: "https://play-lh.googleusercontent.com/P5o5weGddqT1dUJ_WFd-iCjkzepeyk0HNeAEWjrigJvDg8X9uWPcm6NPq_i_wd6M1A=w240-h480-rw",
+    link: "https://play.google.com/store/apps/details?id=com.filemanager.fileexplorer.filebrowser",
+    desc: "Simple & powerful file explorer",
+    category: "Productivity",
+    downloads: "10K+"
   },
   {
-    name: "Urdu Shayari Poetry on Picture",
-    description: "App for adding Urdu poetry to photos.",
-    link: "https://play.google.com/store/apps/details?id=com.urdu.poetry.shayari.on.picture.status.editor.maker",
-    downloads: "50K+",
-    status: "available",
-    category: "Photography"
+    title: "Habits Tracker",
+    icon: "https://play-lh.googleusercontent.com/gGHaWnV9n3EK0jpJ_yessWA1PF6mcL7Ys41mBPTCTXtusf13Yr2zVpVYAOI69ZX2Gjc=w240-h480-rw",
+    link: "https://play.google.com/store/apps/details?id=org.isoron.uhabits&pcampaignid=web_share",
+    desc: "Build daily habits ",
+    category: "Productivity",
+    downloads: "5M+"
   },
   {
-    name: "Ramadan Calendar 2025, Prayer",
-    description: "Updated Ramadan schedules and prayer times.",
-    link: "https://play.google.com/store/apps/details?id=com.ramadan.calendar.muslim.prayer.time.qibla",
-    downloads: "50K+",
-    status: "available",
-    category: "Lifestyle"
+    title: "True Muslim",
+    icon: "https://play-lh.googleusercontent.com/laFVeWHYJkcdmmACCGRr2m4JeFRWQR1mAC6h1EcyWRI3xikbfZLfzbV-uhO9Ny0NmA=w240-h480-rw",
+    link: "https://play.google.com/store/apps/details?id=com.spiritsoft.prayertimes.salatuk.muslims&hl=en&gl=US",
+    desc: "Prayer times & Qibla finder",
+    category: "Lifestyle",
+    downloads: "1M+"
   },
   {
-    name: "Perfect Body Editor For All",
-    description: "Photo editor for body shape enhancements.",
-    link: "https://play.google.com/store/apps/details?id=com.perfect.body.editor.photo.shape.curve.abs.muscle",
-    downloads: "100K+",
-    status: "available",
-    category: "Photography"
+    title: "Islam Pro",
+    icon: "https://play-lh.googleusercontent.com/Q89cH_o4bkuLMM6XlQKgeBxdgiaSK9bxtmaFvO5XETxqrNVoVufIPnoXp3P9ACdzsbw=s94-rw",
+    link: "https://play.google.com/store/apps/details?id=com.fauztech.prayer.times.salat.azan.alarm.qibla&hl=en",
+    desc: "Prayer times, Qibla, Azan alarms",
+    category: "Lifestyle",
+    downloads: "1M+"
   },
   {
-    name: "Air Horn, Fart & Haircut Prank",
-    description: "Fun app with prank sound effects.",
-    link: "https://play.google.com/store/apps/details?id=com.air.horn.prank.sounds.fart.haircut.funny.noise",
-    downloads: "50K+",
-    status: "available",
-    category: "Entertainment"
+    title: "Dua Adkar",
+    icon: "https://play-lh.googleusercontent.com/I11KNJgdDgnMnN6EbOsP5wBXJfNzb2hoRNbEhUGUmWhihJ_pG5sjLpTEAX-30BxVkC4=w240-h480-rw",
+    link: "https://play.google.com/store/apps/details?id=com.ramadandua.duaazkar&hl=en",
+    desc: "Islamic supplications & reminders",
+    category: "Lifestyle",
+    downloads: "50K+"
   },
   {
-    name: "Photo Collage Maker & Grid Art",
-    description: "Advanced collage maker with grid layouts.",
-    link: "https://play.google.com/store/apps/details?id=com.photo.collage.maker.grid.art.editor.picture.frame",
-    downloads: "100K+",
-    status: "available",
-    category: "Photography"
+    title: "Ramadan Calendar",
+    icon: "https://play-lh.googleusercontent.com/zB94cvnB-XvxNR_ENx8oktA5wS4NBcF7R6YNmXHQgeTy4aD1fRkgsIpExLgwTEu-VeMP=s256-rw",
+    link: "https://play.google.com/store/apps/details?id=com.fazutech.ramadan_2018&hl=en",
+    desc: "Ramadan prayer & fasting schedules",
+    category: "Lifestyle",
+    downloads: "1M+"
   },
   {
-    name: "Love Photo Frame",
-    description: "Romantic photo frames for love-themed edits.",
-    link: "https://play.google.com/store/apps/details?id=com.love.photo.frame.couple.romantic.picture.editor",
-    downloads: "50K+",
-    status: "available",
-    category: "Photography"
+    title: "My Mosque 360 Qibla Direction",
+    icon: "https://play-lh.googleusercontent.com/tCGgNxuSIxHIGiVY9Djpo5_6ZC78j7CZQib4Vv8y_3G3I0QDrRcmEj22TzgDKHf7hj_g=w240-h480-rw",
+    link: "https://play.google.com/store/apps/details?id=com.qibladirection.prayertimes.salatuk.muslims&hl=en&gl=US",
+    desc: "Prayer times & Qibla finder",
+    category: "Lifestyle",
+    downloads: "10K+"
   },
   {
-    name: "Car Engine Sound - Gas Pedal",
-    description: "Realistic car engine sound simulator.",
-    link: "https://play.google.com/store/apps/details?id=com.car.engine.sound.gas.pedal.simulator.racing.noise",
-    downloads: "50K+",
-    status: "available",
-    category: "Entertainment"
+    title: "Document Scanner",
+    icon: "Coming soon",
+    link: null,
+    desc: "High-quality document scanning (Coming Soon)",
+    category: "Productivity",
+    downloads: null
   },
   {
-    name: "Al-Momin Islamic App",
-    description: "Comprehensive Islamic app with Quran and prayer tools.",
-    link: "https://play.google.com/store/apps/details?id=com.almomin.islamic.app.quran.prayer.time.qibla",
-    downloads: "100K+",
-    status: "available",
-    category: "Lifestyle"
+    title: "Languages Translator",
+    icon: "https://play-lh.googleusercontent.com/77npc3YobupBIqM6Xnha8cVx8Z36norIf8WFZhptlh2FkkFRNKnhnvKv-fAK2VRCgqg=w240-h480-rw",
+    link: "https://play.google.com/store/apps/details?id=translate.all.language.translator.cameratranslator",
+    desc: "Text & speech translation",
+    category: "Tools",
+    downloads: "5M+",
+    isRecent: false
+  },
+  {
+    title: "Thumbnail Maker AI",
+    icon: "Coming soon",
+    link: null,
+    desc: "AI-powered thumbnail creation (Coming Soon)",
+    category: "Photography",
+    downloads: null
+  },
+  {
+    title: "Car Engine Sound - Gas Pedal",
+    icon: "https://play-lh.googleusercontent.com/_cA-PsIK7U6GdKz9Wy2DMo-x_MG4slh-xpeEyCwHKacNRS-olpglet6B09hDsl9teg=s256-rw",
+    link: "https://play.google.com/store/apps/details?id=com.ax.car.engine.sounds&hl=en",
+    desc: "Car engine sound simulator",
+    category: "Entertainment",
+    downloads: "1M+",
+    isRecent: true
+  },
+  {
+    title: "Al-Momin Islamic App",
+    icon: "https://play-lh.googleusercontent.com/SMbKzrymCHhJZwWMR_XXq3uz2BphtaW0yQS6CSlRn1MQbQlMl7W-oVN_k9NrgG6fgLg=s64-rw",
+    link: "https://play.google.com/store/apps/details?id=com.almomin.quran.tasbeehcounter.qibladirection.prayertimes.salatuk",
+    desc: "Quran, prayer times, tasbeeh",
+    category: "Lifestyle",
+    downloads: "10K+",
+    isRecent: true
+  },
+  {
+    title: "Languages Translator",
+    icon: "https://play-lh.googleusercontent.com/Dx0EgArYXj-AHIwgaq7X6DbAORIElYeJE_MqyMiHx7Z9O2Zvd2x1-Qw3K-YRMG2PdaA=s64-rw",
+    link: "https://play.google.com/store/apps/details?id=com.tbs.language.translatorapp.smartscanner.dictionary.translateme",
+    desc: "Text & speech translation",
+    category: "Tools",
+    downloads: "50+",
+    isRecent: true
   }
 ];
-
-export const categories = Array.from(new Set(portfolioApps.map(app => app.category)));
