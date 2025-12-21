@@ -101,7 +101,7 @@ const Hero = () => {
   marginBottom: '0.5rem'
 }}
             >
-              Senior Software Engineer | Android Development Expert
+              Senior Software Engineer Android & Tech Lead
             </h2>
             
             {/* Profile text with enhanced styling - White background */}

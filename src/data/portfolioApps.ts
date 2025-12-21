@@ -39,6 +39,15 @@ export const portfolioApps: App[] = [
     isRecent: true
   },
   {
+    title: "Gold Finder & Metal Detector",
+    icon: "https://play-lh.googleusercontent.com/LdjZaEfTZ7D2UVWt8rSrkITiMoKUOclGx27JIfI8kPpsgQHmDefaS7ZeTMupXh2Tip0=w240-h480-rw",
+    link: "https://play.google.com/store/apps/details?id=com.ots.golddetector.metaldetector.studfinder",
+    desc: "Gold Finder & Metal Detector",
+    category: "Tool",
+    downloads: "500K+",
+    isRecent: true
+  },
+  {
     title: "Smarty Men Suit Photo Editor",
     icon: "https://play-lh.googleusercontent.com/E4u_Kpbf8I2pUDyD6Dss6vQxYAzLT-ALQvxn68S3XVr-rXmXMM1NQCrTF_PC49VabCOc=w240-h480-rw",
     link: "https://play.google.com/store/apps/details?id=com.ant.smarty.men.ai.photo.editor",
@@ -263,6 +272,15 @@ export const portfolioApps: App[] = [
     desc: "Text & speech translation",
     category: "Tools",
     downloads: "50+",
+    isRecent: true
+  },
+  {
+    title: "Speaker Cleaner",
+    icon: "https://play-lh.googleusercontent.com/dtDsCuIM2IoChxbN11lPYbMFOoAmeXg3KpmuO0HOU6Oc_Zbvcsug0ZYd3GVKSYcngeIas_HE7fF_sbhT-4cyCA=w240-h480-rw",
+    link: "https://play.google.com/store/apps/details?id=com.ant.seaker.cleaner",
+    desc: "Speaker Cleaner - Water Eject for Clear Sound",
+    category: "Tools",
+    downloads: "500K+",
     isRecent: true
   }
 ];
